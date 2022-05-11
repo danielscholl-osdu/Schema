@@ -15,19 +15,18 @@
  * limitations under the License.
  */
 
-package org.opengroup.osdu.schema.impl.messagebus.model;
+package org.opengroup.osdu.schema.configuration;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class SchemaPubSubInfo {
+@Configuration
+@ConfigurationProperties
+@Getter
+@Setter
+public class PropertiesConfiguration {
 
-  private String kind;
-
-  private String op;
-
+  private String sharedTenantName;
 }
